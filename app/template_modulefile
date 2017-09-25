@@ -1,0 +1,66 @@
+#%Module1.0
+proc ModulesHelp { } {
+  puts stderr "SHORT DESCRIPTION OF PACKAGE HERE"
+}
+module-whatis "SHORT DESCRIPTION OF PACKAGE HERE"
+
+#conflict intel gcc solaris-studio
+
+#source $env(MODULESHOME)/modulefiles/.5xonly
+
+#source $env(MODULESHOME)/modulefiles/.6xonly
+
+#source $env(MODULESHOME)/modulefiles/.gui_warning 
+
+#source $env(MODULESHOME)/modulefiles/.deprecated_warning
+
+#source $env(MODULESHOME)/modulefiles/.experimental_warning
+
+#source $env(MODULESHOME)/modulefiles/.discouraged_warning
+
+#source $env(MODULESHOME)/modulefiles/.retired_error
+
+#module load java/latest
+#prereq java/latest
+
+set topdir /packages/6x/XXXXX/XXXXXX
+
+# Edit the entries below as needed and comment out any that are not relevant
+prepend-path    PATH                $topdir/bin
+prepend-path    CLASSPATH           $topdir
+prepend-path    LD_LIBRARY_PATH     $topdir/lib
+prepend-path    LD_LIBRARY_PATH     $topdir/lib64
+prepend-path    INCLUDE             $topdir/include
+prepend-path    MANPATH             $topdir/share/man
+prepend-path    INFOPATH            $topdir/share/info
+
+
+# A2C2 FIELDS
+setenv A2C2_5X "1"
+setenv A2C2_6X "1"
+setenv A2C2_NOLOGIN "0"
+setenv A2C2_DEPRECATED "0"
+setenv A2C2_EXPERIMENTAL "0"
+setenv A2C2_DISCOURAGED "0"
+setenv A2C2_RETIRED "0"
+setenv A2C2_VIRTUAL "0"
+
+setenv A2C2_TAGS "CATEGORY"
+setenv A2C2_DESCRIPTION "LONG DESCRIPTION OF PACKAGE, PRERABLY TAKEN FROM WEBSITE FOR PACKAGE"
+setenv A2C2_URL "HOME PAGE FOR PACKAGE"
+setenv A2C2_NOTES ""
+
+setenv A2C2_INSTALL_DATE "2016-05-18"
+setenv A2C2_INSTALLER "leereyno"
+setenv A2C2_BUILDPATH "migrated from ngcc"
+
+setenv A2C2_MODIFY_DATE "YYYY-MM-DD" 
+setenv A2C2_MODIFIER "<ASURITE>"
+
+setenv A2C2_VERIFY_DATE "YYYY-MM-DD"
+setenv A2C2_VERIFIER "<ASURITE>"
+
+source $env(MODULESHOME)/modulefiles/.unset_a2c2
+
+# vim: ft=tcl
+

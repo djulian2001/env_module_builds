@@ -1,0 +1,29 @@
+#%Module1.0
+# MAKE HIDDEN IN PRODUCTION
+
+source $env(MODULESHOME)/modulefiles/.norun_error
+
+# A2C2 FIELDS
+setenv A2C2_5X "1"
+setenv A2C2_6X "1"
+setenv A2C2_NOLOGIN "0"
+setenv A2C2_DEPRECATED "0"
+setenv A2C2_EXPERIMENTAL "0"
+setenv A2C2_DISCOURAGED "0"
+setenv A2C2_RETIRED "0"
+setenv A2C2_VIRTUAL "0"
+
+setenv A2C2_INSTALL_DATE "YYYY-MM-DD" 
+setenv A2C2_INSTALLER "<ASURITE>"
+setenv A2C2_BUILDPATH "" 
+
+setenv A2C2_MODIFY_DATE "YYYY-MM-DD" 
+setenv A2C2_MODIFIER "<ASURITE>"
+
+setenv A2C2_VERIFY_DATE "YYYY-MM-DD" 
+setenv A2C2_VERIFIER "<ASURITE>"
+
+source $env(MODULESHOME)/modulefiles/.unset_a2c2
+
+# vim: ft=tcl
+
